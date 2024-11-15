@@ -1,0 +1,117 @@
+[
+    {
+        "name": "SRI Surya Paddy Seeds ",
+        "price": 245.67,
+        "description":"SRI Surya Paddy Seeds - Vadlu for Pooja & Germination 5kg",
+        "ratings": 4.5,
+        "images": [
+            {
+                "image": "/images/product/ram1.jpg"
+            },
+            {
+                "image": "/images/product/ram2.jpg"
+            }
+        ],
+        "category": "bird food",
+        "seller": "Amazon",
+        "stock": 5,
+        "numOfReviews": 15,
+        "reviews": []
+    },
+    {
+        "name": "Tunai Paddy Whole Grain Bird",
+        "price": 150.32,
+        "description": "Tunai Paddy Whole Grain Bird Feed | 450g | Perfect Bird Food For Canaries, Finches, Budgies, Parakeets, Parrotlets,.",
+        "ratings": 3.5,
+        "images": [
+            {
+                "image": "/images/product/ram3.jpg"
+            }
+        ],
+        "category": "puja articles",
+        "seller": "Flipkart",
+        "stock": 9,
+        "numOfReviews": 5,
+        "reviews": []
+    },
+    {
+        "name": "Pets Wizard - Birds Food",
+        "price": 440.57,
+        "description": "Pets Wizard - Birds Food Premium Rice Paddy Seeds 450 Grams,All Life Stages",
+        "ratings": 2,
+        "images": [
+            {
+                "image": "/images/product/ram4.jpg"
+            }
+        ],
+        "category": "paddy seeds",
+        "seller": "Ebay",
+        "stock": 9,
+        "numOfReviews": 12,
+        "reviews": []
+    },
+    {
+        "name": "Dhan Paddy Seeds ",
+        "price": 250.45,
+        "description":"Dhan Paddy Seeds - Vadlu - For Pooja & Germination. Puja Dhaan, Puja Hawan dhaan,",
+        "ratings": 4,
+        "images": [
+          {
+            "image": "/images/product/ram11.jpg"
+          }
+        ],
+        "category": "paddy seeds",
+        "seller": "Ebay",
+        "stock": 9,
+        "numOfReviews": 12,
+        "reviews": []
+      },
+      {
+        "name": "Birds Food Premium Rice",
+        "price": 767.32,
+        "description": "Birds Food Premium Rice Paddy Seeds for All Type of Birds. Vadlu for Birds 1kg.",
+        "ratings": 5,
+        "images": [
+          {
+            "image": "/images/product/ram12.jpg"
+          }
+        ],
+        "category": "paddy seeds",
+        "seller": "Ebay",
+        "stock": 9,
+        "numOfReviews": 12,
+        "reviews": []
+    },
+    {
+        "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
+        "price": 15.46,
+        "description": "Gigantic 60 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
+        "ratings": 5,
+        "images": [
+            {
+                "image": "/images/product/ram13.jpg"
+            }
+        ],
+        "category": "Headphones",
+        "seller": "Amazon",
+        "stock": 4,
+        "numOfReviews": 20,
+        "reviews": []
+    },
+    {
+        "name": "Campus Men's Maxico Running Shoes",
+        "price": 10.12,
+        "description": "The high raised back cover with extra padding.",
+        "ratings": 3,
+        "images": [
+            {
+                "image": "/images/product/ram14.jpg"
+            }
+        ],
+        "category": "Sports",
+        "seller": "Ebay",
+        "stock": 6,
+        "numOfReviews": 9,
+        "reviews": []
+    }
+]
