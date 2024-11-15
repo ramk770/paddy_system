@@ -4,6 +4,9 @@ const connectDatabase = require('./config/database');
 
 
 connectDatabase();
+app.get('/', (req, res) => {
+  res.send('Hello, World!');  // Or send your desired response here
+})
 
 const server = app.listen(process.env.PORT,()=>{
     console.log(`My Server listening to the  hello port: ${process.env.PORT} in  ${process.env.NODE_ENV} `)
