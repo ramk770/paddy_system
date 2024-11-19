@@ -43,21 +43,21 @@ import {
 } from '../slices/userSlice'
 import axios from 'axios';
 
+// userActions.js
 export const login = (email, password) => async (dispatch) => {
+    try {
+        dispatch(loginRequest());
+        const { data } = await axios.post(`${localhost}/api/v1/login`, { email, password });
+        dispatch(loginSuccess(data));
+    } catch (error) {
+        dispatch(loginFail(error.response?.data?.message || "An error occurred"));
+    }
+};
 
-        try {
-            dispatch(loginRequest())
-            const { data }  = await axios.post(`/api/v1/login`,{email,password});
-            dispatch(loginSuccess(data))
-        } catch (error) {
-            dispatch(loginFail(error.response.data.message))
-        }
-
-}
-
-export const clearAuthError = dispatch => {
-    dispatch(clearError())
-}
+export const clearAuthError = () => (dispatch) => {
+    dispatch(clearError());
+};
+        
 
 export const register = (userData) => async (dispatch) => {
 

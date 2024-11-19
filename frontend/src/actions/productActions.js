@@ -4,7 +4,7 @@ import { productsFail, productsSuccess, productsRequest, adminProductsRequest, a
 import { productFail, productSuccess, productRequest, createReviewRequest, createReviewSuccess, createReviewFail, newProductRequest, newProductSuccess, newProductFail, deleteProductRequest, deleteProductSuccess, deleteProductFail, updateProductRequest, updateProductSuccess, updateProductFail, reviewsRequest, reviewsSuccess, reviewsFail, deleteReviewRequest, deleteReviewSuccess, deleteReviewFail } from '../slices/productSlice';
 
 export const getProducts = (keyword, price, category, rating, currentPage) => async (dispatch) => {
-
+   
     try {  
         dispatch(productsRequest()) 
         let link = `${localhost}/api/v1/products?page=${currentPage}`;
