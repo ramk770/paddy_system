@@ -44,12 +44,27 @@ import {
 import axios from 'axios';
 
 // userActions.js
+// export const login = (email, password) => async (dispatch) => {
+//     try {
+//         dispatch(loginRequest());
+//         const { data } = await axios.post(`${localhost}/api/v1/login`, { email, password });
+//         dispatch(loginSuccess(data));
+//     } catch (error) {
+//         dispatch(loginFail(error.response?.data?.message || "An error occurred"));
+//     }
+// };
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch(loginRequest());
         const { data } = await axios.post(`${localhost}/api/v1/login`, { email, password });
+
+        // Store the token in local storage
+        localStorage.setItem("token", data.token);
+        console.log(data.token,"hello token give the token");
+
         dispatch(loginSuccess(data));
     } catch (error) {
+       console.log("hello error login token")
         dispatch(loginFail(error.response?.data?.message || "An error occurred"));
     }
 };
@@ -170,56 +185,131 @@ export const resetPassword = (formData, token) => async (dispatch) => {
     }
 
 }
-
-export const getUsers =  async (dispatch) => {
-
+//commanded mistake like
+export const getUsers = async (dispatch) => {
     try {
-        dispatch(usersRequest())
-        const { data }  = await axios.get(`${localhost}/api/v1/admin/users`);
-        dispatch(usersSuccess(data))
-    } catch (error) {
-        dispatch(usersFail(error.response.data.message))
-    }
+        dispatch(usersRequest());
 
-}
+        // Retrieve the token from localStorage
+        const token = localStorage.getItem('token');
 
-export const getUser = id => async (dispatch) => {
-
-    try {
-        dispatch(userRequest())
-        const { data }  = await axios.get(`${localhost}/api/v1/admin/user/${id}`);
-        dispatch(userSuccess(data))
-    } catch (error) {
-        dispatch(userFail(error.response.data.message))
-    }
-
-}
-
-export const deleteUser = id => async (dispatch) => {
-
-    try {
-        dispatch(deleteUserRequest())
-        await axios.delete(`${localhost}/api/v1/admin/user/${id}`);
-        dispatch(deleteUserSuccess())
-    } catch (error) {
-        dispatch(deleteUserFail(error.response.data.message))
-    }
-
-}
-
-export const updateUser = (id, formData) => async (dispatch) => {
-
-    try {
-        dispatch(updateUserRequest())
+        // Set the Authorization header with the token
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                'Authorization': token ? `Bearer ${token}` : ''
             }
-        }
-        await axios.put(`${localhost}/api/v1/admin/user/${id}`, formData, config);
-        dispatch(updateUserSuccess())
-    } catch (error) {
-        dispatch(updateUserFail(error.response.data.message))
-    }
+        };
 
-}
+        // Make the API request with the Authorization header
+        const { data } = await axios.get(`${localhost}/api/v1/admin/users`, config);
+
+        dispatch(usersSuccess(data));
+    } catch (error) {
+        dispatch(usersFail(error.response?.data?.message || "An error occurred"));
+    }
+};
+// export const getUsers =  async (dispatch) => {
+
+//     try {
+//         dispatch(usersRequest())
+//         const { data }  = await axios.get(`${localhost}/api/v1/admin/users`);
+//         dispatch(usersSuccess(data))
+//     } catch (error) {
+//         dispatch(usersFail(error.response.data.message))
+//     }
+
+// }
+export const getUser = id => async (dispatch) => {
+    try {
+        dispatch(userRequest());
+
+        // Get the token from localStorage
+        const token = localStorage.getItem('token');
+        console.log("Retrieved token:", token);
+        
+        // Set the token in the headers
+        const config = {
+            headers: {
+                'Authorization': token ? `Bearer ${token}` : ''
+            }
+        };
+        console.log("Headers:", config.headers);
+
+        // Fetch the user data using the token
+        const { data } = await axios.get(`${localhost}/api/v1/admin/user/${id}`, config);
+        dispatch(userSuccess(data));
+    } catch (error) {
+         console.log("resorce nto get the all the user data");
+        dispatch(userFail(error.response?.data?.message || "An error occurred"));
+    }
+};
+
+// export const getUser = id => async (dispatch) => {
+
+//     try {
+//         dispatch(userRequest())
+//         const { data }  = await axios.get(`${localhost}/api/v1/admin/user/${id}`);
+//         dispatch(userSuccess(data))
+//     } catch (error) {
+//         dispatch(userFail(error.response.data.message))
+//     }
+
+// }
+
+// export const deleteUser = id => async (dispatch) => {
+
+//     try {
+//         dispatch(deleteUserRequest())
+//         await axios.delete(`${localhost}/api/v1/admin/user/${id}`);
+//         dispatch(deleteUserSuccess())
+//     } catch (error) {
+//         dispatch(deleteUserFail(error.response.data.message))
+//     }
+
+// }
+export const deleteUser = (id) => async (dispatch) => {
+    try {
+        dispatch(deleteUserRequest());
+
+        // Retrieve the token from localStorage
+        const token = localStorage.getItem('token');
+
+        // Set the Authorization header with the token
+        const config = {
+            headers: {
+                'Authorization': token ? `Bearer ${token}` : ''
+            }
+        };
+
+        // Make the DELETE request with the Authorization header
+        await axios.delete(`${localhost}/api/v1/admin/user/${id}`, config);
+
+        dispatch(deleteUserSuccess());
+    } catch (error) {
+        dispatch(deleteUserFail(error.response?.data?.message || "An error occurred"));
+    }
+};
+
+export const updateUser = (id, formData) => async (dispatch) => {
+    try {
+        dispatch(updateUserRequest());
+
+        // Retrieve the token from localStorage
+        const token = localStorage.getItem('token');
+
+        // Set the Authorization header with the token
+        const config = {
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': token ? `Bearer ${token}` : ''
+            }
+        };
+
+        // Make the PUT request with the Authorization header
+        await axios.put(`${localhost}/api/v1/admin/user/${id}`, formData, config);
+
+        dispatch(updateUserSuccess());
+    } catch (error) {
+        dispatch(updateUserFail(error.response?.data?.message || "An error occurred"));
+    }
+};
