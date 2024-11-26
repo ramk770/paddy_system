@@ -39,7 +39,7 @@ router.route('/myprofile').get(isAuthenticatedUser, getUserProfile);
 router.route('/update').put(isAuthenticatedUser,upload.single('avatar'), updateProfile);
 
 //Admin routes
-router.route('/admin/users').get(isAuthenticatedUser,authorizeRoles('admin'), getAllUsers);
+router.route('/admin/users').get(getAllUsers);
 router.route('/admin/user/:id').get(isAuthenticatedUser,authorizeRoles('admin'), getUser)
                                 .put(isAuthenticatedUser,authorizeRoles('admin'), updateUser)
                                 .delete(isAuthenticatedUser,authorizeRoles('admin'), deleteUser);
