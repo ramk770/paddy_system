@@ -6,7 +6,7 @@ const connectDatabase = require('./config/database');
 connectDatabase();
 
 const server = app.listen(process.env.PORT,()=>{
-    console.log(`My Server listening to the  hello port: ${process.env.PORT} in  ${process.env.NODE_ENV} `)
+    console.log(`My Server listening to the port: ${process.env.PORT} in  ${process.env.NODE_ENV} `)
 })
 
 process.on('unhandledRejection',(err)=>{
@@ -26,5 +26,4 @@ process.on('uncaughtException',(err)=>{
 })
 
 
-// 
-// D:\paddysystem\backend\server.js
+

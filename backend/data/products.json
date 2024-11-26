@@ -1,82 +1,82 @@
 [
     {
-        "name": "SRI Surya Paddy Seeds ",
+        "name": "OPPO F21s Pro 5G",
         "price": 245.67,
-        "description":"SRI Surya Paddy Seeds - Vadlu for Pooja & Germination 5kg",
+        "description": "OPPO F21s Pro 5G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
         "ratings": 4.5,
         "images": [
             {
-                "image": "/images/product/ram1.jpg"
+                "image": "/images/products/1.jpg"
             },
             {
-                "image": "/images/product/ram2.jpg"
+                "image": "/images/products/2.jpg"
             }
         ],
-        "category": "bird food",
+        "category": "Mobile Phones",
         "seller": "Amazon",
         "stock": 5,
         "numOfReviews": 15,
         "reviews": []
     },
     {
-        "name": "Tunai Paddy Whole Grain Bird",
+        "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
         "price": 150.32,
-        "description": "Tunai Paddy Whole Grain Bird Feed | 450g | Perfect Bird Food For Canaries, Finches, Budgies, Parakeets, Parrotlets,.",
+        "description": "Minix watches are exclusively designed to fulfill the advanced tech needs of today’s generation.",
         "ratings": 3.5,
         "images": [
             {
-                "image": "/images/product/ram3.jpg"
+                "image": "/images/products/2.jpg"
             }
         ],
-        "category": "puja articles",
+        "category": "Accessories",
         "seller": "Flipkart",
         "stock": 9,
         "numOfReviews": 5,
         "reviews": []
     },
     {
-        "name": "Pets Wizard - Birds Food",
+        "name": "Dell Inspiron 3511 Laptop",
         "price": 440.57,
-        "description": "Pets Wizard - Birds Food Premium Rice Paddy Seeds 450 Grams,All Life Stages",
+        "description": "Dell Inspiron 3511 11th Generation Intel Core i5-1135G7 Processor (8MB Cache, up to 4.2 GHz);Operating System: Windows 10 Home Single Language, English",
         "ratings": 2,
         "images": [
             {
-                "image": "/images/product/ram4.jpg"
+                "image": "/images/products/3.jpg"
             }
         ],
-        "category": "paddy seeds",
+        "category": "Laptops",
         "seller": "Ebay",
         "stock": 9,
         "numOfReviews": 12,
         "reviews": []
     },
     {
-        "name": "Dhan Paddy Seeds ",
+        "name": "Lenovo IdeaPad Slim 3 Laptop",
         "price": 250.45,
-        "description":"Dhan Paddy Seeds - Vadlu - For Pooja & Germination. Puja Dhaan, Puja Hawan dhaan,",
+        "description": "Lenovo IdeaPad Slim 311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
         "ratings": 4,
         "images": [
           {
-            "image": "/images/product/ram11.jpg"
+            "image": "/images/products/6.jpg"
           }
         ],
-        "category": "paddy seeds",
+        "category": "Laptops",
         "seller": "Ebay",
         "stock": 9,
         "numOfReviews": 12,
         "reviews": []
       },
       {
-        "name": "Birds Food Premium Rice",
+        "name": "ASUS VivoBook 15 Laptop",
         "price": 767.32,
-        "description": "Birds Food Premium Rice Paddy Seeds for All Type of Birds. Vadlu for Birds 1kg.",
+        "description": "ASUS VivoBook 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
         "ratings": 5,
         "images": [
           {
-            "image": "/images/product/ram12.jpg"
+            "image": "/images/products/7.jpg"
           }
         ],
-        "category": "paddy seeds",
+        "category": "Laptops",
         "seller": "Ebay",
         "stock": 9,
         "numOfReviews": 12,
@@ -89,7 +89,7 @@
         "ratings": 5,
         "images": [
             {
-                "image": "/images/product/ram13.jpg"
+                "image": "/images/products/4.jpg"
             }
         ],
         "category": "Headphones",
@@ -105,7 +105,7 @@
         "ratings": 3,
         "images": [
             {
-                "image": "/images/product/ram14.jpg"
+                "image": "/images/products/5.jpg"
             }
         ],
         "category": "Sports",

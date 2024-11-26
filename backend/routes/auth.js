@@ -26,7 +26,7 @@ const {
     updateUser,
     deleteUser
  } = require('../controllers/authController');
-const router = express.Router();``
+const router = express.Router();
 const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/authenticate')
 
 router.route('/register').post(upload.single('avatar'), registerUser);
