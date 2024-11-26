@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 dotenv.config({path:path.join(__dirname,"config/config.env")});
 
 app.use(cors()); // This will allow all origins
-
+app.use(express.urlencoded({extended: true}))
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname,'uploads')))
