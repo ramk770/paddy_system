@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express();
 const cors = require('cors'); // Import the cors module
-const errorMiddleware = require('./middlewares/error');
+const errorMiddleware = require('./models/middlewares/error');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 dotenv.config({ path: path.join(__dirname, "config/config.env") });
 
+
+app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
 app.use(cookieParser());

@@ -27,7 +27,7 @@ const {
     deleteUser
  } = require('../controllers/authController');
 const router = express.Router();
-const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/authenticate')
+const { isAuthenticatedUser, authorizeRoles } = require('../models/middlewares/authenticate')
 
 router.route('/register').post(upload.single('avatar'), registerUser);
 router.route('/login').post(loginUser);
